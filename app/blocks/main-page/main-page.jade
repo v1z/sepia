@@ -1,0 +1,7 @@
+include ../header/header
+
+mixin main-page(data)
+	- data = data || {}
+
+	+b.main-page&attributes(attributes)
+		+header({title: 'Распродажа летней коллекции'})

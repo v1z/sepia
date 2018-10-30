@@ -1,3 +1,21 @@
-mixin header()
+include ../container/container
+include ../menu/menu
+include ../icon/icon
+
+mixin header(data)
+	- data = data || {}
+
 	+b.header&attributes(attributes)
-		block
+		+container.header__content
+			+e('a').link(href='/main.html')
+				+e('img').logo(src='http://via.placeholder.com/66x66' width='66' height='66' alt='Главный логотип')
+				+e('span').name Мануфактура<br>[ Сепия ]
+			+e('span').title= data.title
+			+e('button').toggler.js-menu-toggler(type='button')
+				+icon('burger').burger(width='100%' height='100%')
+				+icon('close').close(width='100%' height='100%')
+
+			+e.menu-wrapper
+				+menu
+
+
