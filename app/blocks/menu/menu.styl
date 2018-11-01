@@ -1,2 +1,154 @@
 .menu
-	display block
+	padding-top 20px
+	padding-bottom 40px
+	min-height 100%
+	font-size 26px
+	color white
+	background-color backplate
+
+	@media tablet
+		font-size 32px
+
+	@media desktop
+		font-size 48px
+
+	&__content
+		display flex
+		flex-direction column
+
+		@media tablet
+			flex-direction row
+			justify-content space-between
+
+	&__column
+		margin-bottom 38px
+		display flex
+		flex-direction column
+		flex-shrink 0
+		width 100%
+
+		@media tablet
+			margin-bottom 0
+			width calc((100% - 66px) / 3)
+			align-items flex-start
+
+		@media desktop
+			width calc((100% - 180px) / 3)
+
+		&:not(:first-child)
+			@media tablet
+				margin-left 33px
+
+	&__links-wrapper
+		display none
+
+		@media tablet
+			margin-top 54px
+			display flex
+			flex-direction column
+
+	&__mobile-links
+		display flex
+		flex-direction column
+
+		@media tablet
+			display none
+
+	&__sub-nav-list
+		display none
+
+		@media tablet
+			display block
+
+		&_open
+			display block
+
+	&__main-nav-item,
+	&__sub-nav-item
+		&:not(:last-child)
+			margin-bottom 12px
+
+	&__sub-nav-item
+		@media tablet
+			font-size 0
+
+	&__link,
+	&__main-nav-link,
+	&__sub-nav-link
+		display flex
+		text-decoration none
+		color inherit
+
+		@media tablet
+			display inline-block
+
+	&__list-toggler
+		position relative
+		margin-bottom 8px
+		font-weight bold
+		text-align left
+		color inherit
+		background-color transparent
+		border none
+
+		@media tablet
+			margin-bottom 24px
+			font-weight 400
+			cursor default
+
+	&__toggler-icon
+		position absolute
+		margin-top 8px
+		margin-left 8px
+		color brown
+
+		@media tablet
+			display none
+
+		&_revert
+			transform rotate(180deg)
+
+	&__link
+		margin-bottom 12px
+		font-size 24px
+		color brown
+
+		@media desktop
+			font-size 34px
+
+		&_bold
+			font-weight bold
+
+		&_big
+			font-size 26px
+
+			@media desktop
+				font-size 42px
+
+		&_bordered
+			padding-top 12px
+			border-top 1px solid brown
+
+		.menu__mobile-links &
+			margin-x -25px
+			padding-x 25px
+
+	&__main-nav-link
+		@media tablet
+			&:hover
+				font-weight bold
+				text-decoration underline
+				text-decoration-color brown
+
+
+	&__sub-nav-link
+		@media tablet
+			font-size 22px
+			transition color trDur
+
+			&:hover
+				text-decoration underline
+				color brown
+
+		@media desktop
+			font-size 34px

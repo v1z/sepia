@@ -1,0 +1,25 @@
+{
+	"navigation": [
+		{"title": "О Мануфактуре", "href": "/index.html"},
+		{"title": "Новое", "href": "/index.html"},
+		{"title": "Дизайнерам", "href": "/index.html"},
+		{"title": "Обучающие программы", "href": "/index.html"},
+		{"title": "Фрезерная и лазерная резка", "href": "/index.html"},
+		{"title": "Контакты", "href": "/index.html"}
+	],
+	"projects": [
+		{"title": "Общественные интерьеры", "href": "/index.html"},
+		{"title": "Предметы мебели", "href": "/index.html"},
+		{"title": "Объекты и декор", "href": "/index.html"},
+		{"title": "Детские проекты", "href": "/index.html"},
+		{"title": "Частные интерьеры", "href": "/index.html"},
+		{"title": "Сувенирная продукция", "href": "/index.html"},
+		{"title": "STUFF для кафе, баров, кофеен, ресторанов", "href": "/index.html"},
+		{"title": "Инсталляции и витрины", "href": "/index.html"},
+		{"title": "Интерактивные зоны, киоски, островуи, малые архитектурные формы", "href": "/index.html"}
+	],
+	"arts": [
+		{"title": "Лаборатория упаковки", "href": "/index.html"},
+		{"title": "Игрушки которые учат доброте", "href": "/index.html"}
+	]
+}

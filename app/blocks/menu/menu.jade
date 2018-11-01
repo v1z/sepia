@@ -1,3 +1,54 @@
-mixin menu()
-	+b.menu&attributes(attributes)
-		block
+include ../container/container
+include ../icon/icon
+
+mixin menu(data)
+	- data = data || {}
+
+	+b('nav').menu&attributes(attributes)
+		+container.menu__content
+			+e.column
+				+e('ul').main-nav-list
+					each link in data.navigation
+						+e('li').main-nav-item
+							+e('a').main-nav-link(href=link.href)= link.title
+				+e.links-wrapper
+					+e('a').link._bold(href='#') Скачать PDF каталог
+
+			+e.column
+				+e('button').list-toggler.js-toggle-projects(type='button') Проекты
+					+icon('arrow').toggler-icon.js-projects-toggler-icon(width='18px' height='18px')
+				+e('ul').sub-nav-list.js-projects-list
+					each link in data.projects
+						+e('li').sub-nav-item
+							+e('a').sub-nav-link(href=link.href)= link.title
+				+e.links-wrapper
+					+e('a').link._big(href='#') Позвонить
+					+e('a').link._big(href='#') What's up
+					+e('a').link._big(href='#') Написать письмо
+
+			+e.column
+				+e('button').list-toggler.js-toggle-arts(type='button') Творческие проекты Мануфактуры
+					+icon('arrow').toggler-icon.js-arts-toggler-icon(width='18px' height='18px')
+				+e('ul').sub-nav-list.js-arts-list
+					each link in data.arts
+						+e('li').sub-nav-item
+							+e('a').sub-nav-link(href=link.href)= link.title
+				+e.links-wrapper
+					+e('a').link(href='#') Участие в фестивалях, маркетах и воркшопах
+					+e('a').link(href='#') Instagram
+					+e('a').link(href='#') Facebook
+					+e('a').link(href='#') ВКонтакте
+
+			+e.mobile-links
+				+e('a').link(href='#') Участие в фестивалях, маркетах и воркшопах
+				+e('a').link(href='#') Instagram
+				+e('a').link(href='#') Facebook
+				+e('a').link(href='#') ВКонтакте
+				+e('a').link._bold._bordered(href='#') Позвонить
+				+e('a').link._bold._bordered(href='#') What's up
+				+e('a').link._bold._bordered(href='#') Написать письмо
+				+e('a').link._bold._bordered(href='#') Скачать PDF каталог
+
+
+
+
