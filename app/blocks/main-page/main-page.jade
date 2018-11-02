@@ -1,8 +1,11 @@
 include ../header/header
+include ../intro/intro
 
 mixin main-page(data)
 	- data = data || {}
 
 	+b.main-page&attributes(attributes)
 		+header({title: 'Распродажа летней коллекции'})
-		//- +intro({title: 'Дизайн и производство'})
+
+		main
+			+intro({title: 'Дизайн и производство'})
