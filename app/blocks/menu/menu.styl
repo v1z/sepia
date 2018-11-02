@@ -61,7 +61,7 @@
 		@media tablet
 			display block
 
-		&_open
+		.menu__list-toggler_open + &
 			display block
 
 	&__main-nav-item,
@@ -93,10 +93,14 @@
 		background-color transparent
 		border none
 
+		&_open
+			color brown
+
 		@media tablet
 			margin-bottom 24px
 			font-weight 400
 			cursor default
+			color inherit
 
 	&__toggler-icon
 		position absolute
@@ -107,13 +111,18 @@
 		@media tablet
 			display none
 
-		&_revert
+		.menu__list-toggler_open &
 			transform rotate(180deg)
 
 	&__link
 		margin-bottom 12px
 		font-size 24px
 		color brown
+
+		&:hover
+			text-decoration underline
+			text-decoration-color brown
+
 
 		@media desktop
 			font-size 34px
