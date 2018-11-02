@@ -1,0 +1,48 @@
+.main-page
+	display block
+
+	&__text-wrapper
+		padding-top 32px
+		padding-bottom 50px
+		display flex
+		flex-direction column
+
+		@media tablet
+			padding-top 78px
+			padding-bottom 96px
+			flex-direction row
+			justify-content space-between
+
+	&__text
+		width 100%
+		font-size 23px
+
+		@media tablet
+			width calc((100% - 60px) / 2)
+			font-size 32px // TODO
+
+		@media desktop
+			width calc((100% - 80px) / 2)
+			font-size 56px
+
+		&:first-child
+			padding-bottom 30px
+
+			@media tablet
+				padding-bottom 0
+
+	&__title
+		padding-top 50px
+		padding-bottom 32px
+		font-size 22px
+		font-weight bold
+		text-transform uppercase
+
+		@media tablet
+			padding-top 96px
+			padding-bottom 50px
+			font-size 48px
+			text-align center
+
+		@media desktop
+			font-size 76px

@@ -3,7 +3,7 @@ include ../container/container
 mixin intro(data)
 	- data = data || {}
 
-	+b('section').intro&attributes(attributes)(style='background-image: url(./images/intro.jpg)')
+	+b('section').intro&attributes(attributes)(style='background-image: url(./images/intro.jpg)')#intro
 		+container
 			+e('span').title= data.title
 
