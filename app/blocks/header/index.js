@@ -4,8 +4,8 @@ const $page = $('.page');
 const $header = $('.header');
 const $toggler = $('.js-menu-toggler');
 
-const topMenuClass = 'header_top-menu';
-const fixedMenuClass = 'header_fixed-menu';
+const topMenuClass = 'header_on-top';
+const fixedMenuClass = 'header_fixed';
 
 export default class Header {
 	constructor() {
