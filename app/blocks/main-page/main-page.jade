@@ -1,6 +1,13 @@
 include ../header/header
+include ../footer/footer
 include ../intro/intro
 include ../container/container
+
+mixin work({title, href})
+	+e.work
+		+e('a').work-link(href=href)
+			+e('img').work-img(src='./images/placeholder.jpg' alt=title width='270' height='270')
+			+e.work-title= title
 
 mixin main-page(data)
 	- data = data || {}
@@ -37,3 +44,11 @@ mixin main-page(data)
 						| необходимые чертежи, делаем экспериментальную модель. Мы вкладываем
 						| средства в новое оборудование, следим за порядком в мастерской,
 						| боремся с пылью и всегда заворачиваем изделия в стрейч-плёнку.
+
+				+e.works-wrapper
+					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0})
+					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0})
+					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0})
+					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0})
+
+		+footer

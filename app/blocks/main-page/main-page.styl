@@ -46,3 +46,79 @@
 
 		@media desktop
 			font-size 76px
+
+	&__works-wrapper
+		margin-top 50px
+		margin-bottom 68px
+		display flex
+		flex-direction column
+
+		@media tablet
+			margin-top 70px
+			margin-bottom 114px
+			flex-direction row
+			justify-content space-between
+			flex-wrap wrap
+
+		@media desktop-large
+			margin-top 95px
+			margin-bottom 160px
+
+	&__work
+		display flex
+		justify-content center
+		width 100%
+
+		@media tablet
+			width calc((100% - 60px) / 2)
+
+		@media desktop
+			width calc((100% - 80px) / 2)
+
+		&:not(:last-child)
+			margin-bottom 48px
+
+			@media tablet
+				margin-bottom 42px
+
+			@media desktop-large
+				margin-bottom 60px
+
+	&__work-link
+		display flex
+		flex-direction column
+		align-items center
+		width 100%
+		max-width 440px
+		color inherit
+
+		@media tablet
+			max-width 674px
+
+		@media desktop-large
+			max-width 880px
+
+		&:hover
+			text-decoration none
+
+	&__work-img
+		margin-bottom 15px
+		width 100%
+		height auto
+
+		@media tablet
+			margin-bottom 22px
+
+		@media desktop-large
+			margin-bottom 50px
+
+	&__work-title
+		display inline-block
+		font-size 18px
+		text-align center
+
+		@media tablet
+			font-size 24px
+
+		@media desktop-large
+			font-size 36px

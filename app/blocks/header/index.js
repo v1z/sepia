@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 const $page = $('.page');
 const $header = $('.header');
+// const $intro = $('.intro');
 const $toggler = $('.js-menu-toggler');
 
 const topMenuClass = 'header_on-top';
@@ -36,7 +37,7 @@ export default class Header {
 
 	handlePageScroll() {
 		// handle header fix to top
-		if (window.pageYOffset <= 200) {
+		if (window.pageYOffset <= 0) {
 			$header.addClass(topMenuClass);
 		}else {
 			$header.removeClass(topMenuClass);
@@ -63,5 +64,11 @@ export default class Header {
 	init() {
 		$toggler.on('click', this.handleMenuToggle);
 		window.addEventListener('scroll', () => this.handlePageScroll());
+		// $intro[0].addEventListener('click', () => {
+		// 	if (window.innerWidth >= 1366 && $('#intro')) {
+		// 		$header.addClass(fixedMenuClass);
+		// 		this.handleMenuToggle();
+		// 	}
+		// });
 	}
 }
