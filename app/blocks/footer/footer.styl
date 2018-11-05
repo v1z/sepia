@@ -82,9 +82,8 @@
 				margin-right 36px
 
 	&__button
+		position relative
 		margin-top 26px
-		display flex
-		align-items center
 		font-size 23px
 		color inherit
 		background-color transparent
@@ -105,6 +104,8 @@
 		position relative
 
 	&__button-icon
-		margin-left 10px
+		position absolute
+		top 50%
+		right -28px
+		transform translateY(-50%) rotate(180deg)
 		color brown
-		transform rotate(180deg)
