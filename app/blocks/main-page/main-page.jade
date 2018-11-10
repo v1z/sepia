@@ -1,5 +1,3 @@
-include ../header/header
-include ../footer/footer
 include ../intro/intro
 include ../container/container
 
@@ -13,8 +11,6 @@ mixin main-page(data)
 	- data = data || {}
 
 	+b.main-page&attributes(attributes)
-		+header({title: 'Распродажа летней коллекции'})
-
 		+intro({title: 'Дизайн и производство'})
 
 		main
@@ -50,5 +46,3 @@ mixin main-page(data)
 					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0, img: 2})
 					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0, img: 3})
 					+work({title: 'Декор для сети магазинов "Радуга"', href: jv0, img: 4})
-
-		+footer

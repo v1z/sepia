@@ -44,7 +44,7 @@ export default class Header {
 		}
 
 		// handle cross intro section
-		if ($('#intro')[0].getBoundingClientRect().bottom <= 0 + $header.height() + 100) {
+		if ($('#intro')[0] && $('#intro')[0].getBoundingClientRect().bottom <= 0 + $header.height() + 100) {
 			$header.addClass(crossIntroMenuClass);
 		}else {
 			$header.removeClass(crossIntroMenuClass);

@@ -13,7 +13,8 @@
 	@media ie11
 		transform none
 
-	&_cross-intro
+	&_cross-intro,
+	&_theme_inner
 		color backplate
 		background-color white
 
@@ -82,16 +83,18 @@
 
 	&__toggler
 		z-index 2
+		font-size 0
 		color white
 		background-color transparent
 		border none
 		transition color trDur
 
-		.header_cross-intro &
-			color backplate
-
 		.header_on-top &
 			color white
+
+		.header_cross-intro &,
+		.header_theme_inner &
+			color backplate
 
 		.header_menu-open &
 			color brown

@@ -2,14 +2,19 @@ include ../container/container
 include ../menu/menu
 include ../icon/icon
 
-mixin header(data)
-	- data = data || {}
+mixin header({theme, title})
+	- classes = []
 
-	+b('header').header._fixed&attributes(attributes)
+	if (theme)
+		- classes.push(`_theme_${theme}`)
+	- classes.push('_fixed')
+
+	+b('header').header(class=classes.join(' '))&attributes(attributes)
 		+container.header__content
-			+e('a').link(href='/main.html')
+			+e('a').link(href='/')
 				+icon('logo').logo(width='100%' height='100%')
-			+e('span').title= data.title
+			if title
+				+e('span').title= title
 			+e('button').toggler.js-menu-toggler(type='button')
 				+icon('burger').burger(width='100%' height='100%')
 				+icon('close').close(width='100%' height='100%')
