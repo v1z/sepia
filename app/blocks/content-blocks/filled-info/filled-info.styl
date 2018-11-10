@@ -1,0 +1,76 @@
+.filled-info
+	margin-x -25px
+	padding 32px 25px
+	display flex
+	flex-direction column
+	background-color #ebebeb
+
+	@media tablet
+		margin-x -60px
+		padding 70px 60px
+		flex-direction row-reverse
+		align-items flex-start
+		justify-content space-between
+
+	&__image
+		margin-bottom 12px
+		width 100%
+		height auto
+		flex-shrink 0
+
+		@media tablet
+			margin-bottom 0
+			width calc((100% - 40px) / 2)
+
+	&__text-wrapper
+		@media tablet
+			margin-top 75px
+			width calc((100% - 40px) / 2)
+
+	&__headline
+		margin-bottom 16px
+
+		@media tablet
+			margin-bottom 20px
+
+		@media desktop
+			margin-bottom 30px
+
+	&__name
+		padding-right 6px
+		font-size 24px
+		font-weight bold
+
+		@media tablet
+			padding-right 0
+			font-size 32px
+
+		@media desktop
+			font-size 48px
+
+	&__job
+		font-size 24px
+
+		@media tablet
+			font-size 32px
+
+		@media desktop
+			font-size 48px
+
+	&__text
+		margin-bottom 18px
+
+		@media tablet
+			margin-bottom 44px
+
+	&__link
+		color inherit
+
+		@media tablet
+			font-size 26px
+
+		@media desktop
+			font-size 34px
+
+		&:hover
+			text-decoration none

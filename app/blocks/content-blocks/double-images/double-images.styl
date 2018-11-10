@@ -1,0 +1,34 @@
+.double-images
+	display flex
+	flex-direction column
+	align-items center
+
+	@media tablet
+		flex-direction row
+		justify-content space-between
+		align-items flex-start
+
+	&__image
+		width 100%
+		height auto
+
+		@media tablet
+			width calc(50% - 20px)
+
+		@media desktop
+			width calc(50% - 40px)
+
+		&:first-child
+			margin-bottom 68px
+
+			@media tablet
+				margin-bottom 0
+
+	&_on-top_first &__image:last-child
+		@media tablet
+			margin-top 105px
+
+	&_on-top_second &__image:first-child
+		@media tablet
+			margin-top 105px
+

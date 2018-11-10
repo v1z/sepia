@@ -1,0 +1,10 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/inner-page/inner-page
+
+block head
+	- pageTitle = 'Внутренняя'
+	- headerTheme = 'inner'
+	- headerTitle = 'Детские проекты'
+
+block content
+	+inner-page

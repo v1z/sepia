@@ -1,0 +1,10 @@
+mixin filled-info({name, job, link, alt})
+	+b('section').filled-info&attributes(attributes)
+		+e('img').image(src='./images/4.jpg' alt=alt width='270' height='270')
+		+e.text-wrapper
+			+e('p').headline
+				+e('span').name= name
+				+e('span').job= `   ${job}`
+			+e('p').text.inner-page__text
+				block
+			+e('a').link(href='mailto:abc@mail.ru')= link

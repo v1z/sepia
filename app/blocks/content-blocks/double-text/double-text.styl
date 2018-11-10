@@ -1,0 +1,22 @@
+.double-text
+	display flex
+	flex-direction column
+
+	@media tablet
+		flex-direction row
+		justify-content space-between
+
+	&__wrapper
+		width 100%
+
+		@media tablet
+			width calc(50% - 20px)
+
+		@media desktop
+			width calc(50% - 40px)
+
+		&:first-child
+			margin-bottom 50px
+
+			@media tablet
+				margin-bottom 0
