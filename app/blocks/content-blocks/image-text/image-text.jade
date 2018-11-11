@@ -1,0 +1,10 @@
+include ../../container/container
+
+mixin image-text({title, imgPosition})
+	+b('section').image-text(class=`_img-pos_${imgPosition}`)&attributes(attributes)
+		+container.image-text__content
+			+e.text-wrapper
+				+e('h2').title.inner-page__title= title
+				+e('p').text.inner-page__text
+					block
+			+e('img').image(src='./images/1.jpg' alt=title width='270' height='270')

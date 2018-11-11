@@ -1,0 +1,52 @@
+.image-text
+	&__content
+		display flex
+		flex-direction column-reverse
+
+		@media tablet
+			align-items flex-start
+
+			.image-text_img-pos_left &
+				flex-direction row-reverse
+
+			.image-text_img-pos_right &
+				flex-direction row
+
+	&__image
+		margin-bottom 12px
+		flex-shrink 0
+		width 100%
+		height auto
+
+		@media tablet
+			margin-bottom 0
+			width 'calc((100% - %s) / 2)' % column-gap_tablet
+
+		@media desktop
+			margin-bottom 0
+			width 'calc((100% - %s) / 2 - %s)' % (column-gap_desktop img-side-margin)
+
+			.image-text_img-pos_left &
+				margin-left img-side-margin
+
+			.image-text_img-pos_right &
+				margin-right img-side-margin
+
+	&__text-wrapper
+		width 100%
+
+		@media tablet
+			margin-top 58px
+
+			.image-text_img-pos_left &
+				margin-left column-gap_tablet
+
+			.image-text_img-pos_right &
+				margin-right column-gap_tablet
+
+		@media desktop
+			.image-text_img-pos_left &
+				margin-left column-gap_desktop
+
+			.image-text_img-pos_right &
+				margin-right column-gap_desktop

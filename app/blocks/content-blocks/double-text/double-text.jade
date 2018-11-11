@@ -1,11 +1,14 @@
+include ../../container/container
+
 mixin double-text({title1, title2})
 	+b('section').double-text&attributes(attributes)
-		+e.wrapper
-			+e('h2').title.inner-page__title= title1
-			+e('p').text.inner-page__text
-				block
+		+container.double-text__content
+			+e.wrapper
+				+e('h2').title.inner-page__title= title1
+				+e('p').text.inner-page__text
+					block
 
-		+e.wrapper
-			+e('h2').title.inner-page__title= title2
-			+e('p').text.inner-page__text
-				block
+			+e.wrapper
+				+e('h2').title.inner-page__title= title2
+				+e('p').text.inner-page__text
+					block

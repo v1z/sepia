@@ -1,22 +1,23 @@
 .double-images
-	display flex
-	flex-direction column
-	align-items center
+	&__content
+		display flex
+		flex-direction column
+		align-items center
 
-	@media tablet
-		flex-direction row
-		justify-content space-between
-		align-items flex-start
+		@media tablet
+			flex-direction row
+			justify-content space-between
+			align-items flex-start
 
 	&__image
 		width 100%
 		height auto
 
 		@media tablet
-			width calc(50% - 20px)
+			width 'calc((100% - %s) / 2)' % column-gap_tablet
 
 		@media desktop
-			width calc(50% - 40px)
+			width 'calc((100% - %s) / 2)' % column-gap_desktop
 
 		&:first-child
 			margin-bottom 68px

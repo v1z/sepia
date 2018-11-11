@@ -1,7 +1,6 @@
 include ../intro/intro
 include ../container/container
-include ../content-blocks/image-left/image-left
-include ../content-blocks/image-right/image-right
+include ../content-blocks/image-text/image-text
 include ../content-blocks/single-text/single-text
 include ../content-blocks/double-text/double-text
 include ../content-blocks/single-image/single-image
@@ -15,23 +14,38 @@ mixin inner-page(data)
 		+container
 			+e('h1').main-title Детские<br>проекты
 
-			+image-left({title: 'Варианты и эскизы'})
-				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet enim ornare rhoncus dictum. Aliquam ornare aliquam vulputate. Pellentesque mattis congue sagittis. Sed tellus lectus, feugiat nec cursus bibendum, eleifend eget libero. Maecenas in urna enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		+image-text({title: 'Варианты и эскизы', imgPosition: 'left'})
+			| Перед тем как сделать изделие или проект мы разрабатываем все
+			| необходимые чертежи, делаем экспериментальную модель. Мы вкладываем
+			| средства в новое оборудование, следим за порядком в мастерской,
+			| боремся с пылью и всегда заворачиваем изделия в стрейч-плёнку.
 
-			+image-right({title: 'Другой заголовок'})
-				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet enim ornare rhoncus dictum. Aliquam ornare aliquam vulputate. Pellentesque mattis congue sagittis. Sed tellus lectus, feugiat nec cursus bibendum, eleifend eget libero. Maecenas in urna enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		+image-text({title: 'Другой заголовок', imgPosition: 'right'})
+			| Перед тем как сделать изделие или проект мы разрабатываем все
+			| необходимые чертежи, делаем экспериментальную модель. Мы вкладываем
+			| средства в новое оборудование, следим за порядком в мастерской,
+			| боремся с пылью и всегда заворачиваем изделия в стрейч-плёнку.
 
-			+single-text({title: 'Идеи, творчество и простые решения'})
-				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet enim ornare rhoncus dictum. Aliquam ornare aliquam vulputate. Pellentesque mattis congue sagittis. Sed tellus lectus, feugiat nec cursus bibendum, eleifend eget libero. Maecenas in urna enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		+single-text({title: 'Идеи, творчество и простые решения'})
+			| Перед тем как сделать изделие или проект мы разрабатываем все
+			| необходимые чертежи, делаем экспериментальную модель. Мы вкладываем
+			| средства в новое оборудование, следим за порядком в мастерской,
+			| боремся с пылью и всегда заворачиваем изделия в стрейч-плёнку.
 
-			+double-text({title1: 'Описание проекта', title2: 'Акцент на главном'})
-				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet enim ornare rhoncus dictum. Aliquam ornare aliquam vulputate. Pellentesque mattis congue sagittis. Sed tellus lectus, feugiat nec cursus bibendum, eleifend eget libero. Maecenas in urna enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		+double-text({title1: 'Описание проекта', title2: 'Акцент на главном'})
+			| Перед тем как сделать изделие или проект мы разрабатываем все
+			| необходимые чертежи, делаем экспериментальную модель. Мы вкладываем
+			| средства в новое оборудование, следим за порядком в мастерской,
+			| боремся с пылью и всегда заворачиваем изделия в стрейч-плёнку.
 
-			+double-images({alt1: 'alt', alt2: 'alt2', onTop: 'first'})
+		+double-images({alt1: 'alt', alt2: 'alt2', onTop: 'first'})
 
-			+filled-info({name: 'Яна Кляйн.', job: 'Дизайнер', link: 'Klein@gmail.com', alt: 'some alt'})
-				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet enim ornare rhoncus dictum. Aliquam ornare aliquam vulputate. Pellentesque mattis congue sagittis. Sed tellus lectus, feugiat nec cursus bibendum, eleifend eget libero. Maecenas in urna enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		+filled-info({name: 'Яна Кляйн.', job: 'Дизайнер', link: 'Klein@gmail.com', alt: 'some alt'})
+			| Перед тем как сделать изделие или проект мы разрабатываем все
+			| необходимые чертежи, делаем экспериментальную модель. Мы вкладываем
+			| средства в новое оборудование, следим за порядком в мастерской,
+			| боремся с пылью и всегда заворачиваем изделия в стрейч-плёнку.
 
-			+single-image({alt: 'some alt'})
+		+single-image({alt: 'some alt'})
 
-			+double-images({alt1: 'alt', alt2: 'alt2', onTop: 'second'})
+		+double-images({alt1: 'alt', alt2: 'alt2', onTop: 'second'})

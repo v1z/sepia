@@ -1,16 +1,18 @@
 .filled-info
-	margin-x -25px
-	padding 32px 25px
-	display flex
-	flex-direction column
+	padding-y 32px
 	background-color #ebebeb
 
 	@media tablet
-		margin-x -60px
-		padding 70px 60px
-		flex-direction row-reverse
-		align-items flex-start
-		justify-content space-between
+		padding-y 70px
+
+	&__content
+		display flex
+		flex-direction column
+
+		@media tablet
+			flex-direction row-reverse
+			align-items flex-start
+			justify-content space-between
 
 	&__image
 		margin-bottom 12px
@@ -20,12 +22,18 @@
 
 		@media tablet
 			margin-bottom 0
-			width calc((100% - 40px) / 2)
+			width 'calc((100% - %s) / 2)' % column-gap_tablet
+
+		@media desktop
+			width 'calc((100% - %s) / 2)' % column-gap_desktop
 
 	&__text-wrapper
 		@media tablet
 			margin-top 75px
-			width calc((100% - 40px) / 2)
+			width 'calc((100% - %s) / 2)' % column-gap_tablet
+
+		@media desktop
+			width 'calc((100% - %s) / 2)' % column-gap_desktop
 
 	&__headline
 		margin-bottom 16px

@@ -1,4 +1,7 @@
+include ../../container/container
+
 mixin double-images({alt1, alt2, onTop})
 	+b('section').double-images(class=`_on-top_${onTop}`)&attributes(attributes)
-		+e('img').image(src='./images/1.jpg' alt=alt1 width='270' height='270')
-		+e('img').image(src='./images/2.jpg' alt=alt2 width='270' height='270')
+		+container.double-images__content
+			+e('img').image(src='./images/1.jpg' alt=alt1 width='270' height='270')
+			+e('img').image(src='./images/2.jpg' alt=alt2 width='270' height='270')
