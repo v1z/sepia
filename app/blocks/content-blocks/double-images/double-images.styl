@@ -9,6 +9,9 @@
 			justify-content space-between
 			align-items flex-start
 
+		@media desktop
+			padding-x 'calc(60px + %s)' % img-side-margin
+
 	&__image
 		width 100%
 		height auto

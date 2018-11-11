@@ -3,7 +3,10 @@
 		width 100%
 		height auto
 
-		@media desktop
+		@media tablet
 			margin-x auto
 			display block
-			width calc(100% - 120px)
+			width 'calc(100% - %s)' % img-side-margin
+
+		@media desktop
+			width 'calc(100% - %s * 4)' % img-side-margin
