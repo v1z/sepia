@@ -57,9 +57,10 @@
 			top 138px
 
 	&__link
+		margin-right auto
 		display flex
 		align-items center
-		margin-right auto
+		cursor pointer
 		color inherit
 
 	&__logo
@@ -84,10 +85,18 @@
 	&__toggler
 		z-index 2
 		font-size 0
+		font-weight bold
+		text-transform uppercase
 		color white
 		background-color transparent
 		border none
 		transition color trDur
+
+		@media tablet
+			font-size 30px
+
+		@media desktop
+			font-size 35px
 
 		.header_on-top &
 			color white
@@ -115,10 +124,20 @@
 		.header_menu-open &
 			display block
 
+			@media tablet
+				display none
+
 		@media tablet
 			size 44px
 
 	&__burger,
 	&__close
 		position relative // ie11 fix
+
+		@media tablet
+			display none
+
+	&__toggler-text
+		&:hover
+			text-decoration underline
 

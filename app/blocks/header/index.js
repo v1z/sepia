@@ -31,6 +31,7 @@ export default class Header {
 
 		if (!this.isMenuOpen) {
 			window.scrollTo(0, this.scrollBeforeMenuOpen);
+			$('.header__menu-wrapper').scrollTop(0); // reopen menu always at top scroll position
 			setTimeout(() => { $header.css({transition: 'transform .5s, color .3s, background-color .3s'}); }, 10);
 		}
 	}
