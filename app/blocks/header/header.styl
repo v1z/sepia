@@ -114,21 +114,12 @@
 		.header_menu-open &
 			display none
 
-		@media tablet
-			size 44px
-
 	&__close
 		display none
 		size 34px
 
 		.header_menu-open &
 			display block
-
-			@media tablet
-				display none
-
-		@media tablet
-			size 44px
 
 	&__burger,
 	&__close
@@ -140,4 +131,7 @@
 	&__toggler-text
 		&:hover
 			text-decoration underline
+
+		.header_menu-open &
+			display none
 
